@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Silkscreen&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: black;
+    color: rgb(154, 232, 235);
+    height: 67px;
+    font-family: 'DynaPuff', cursive;
+    font-size: 30px;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+
+nav li {
+    list-style: none;
+}
+
+.line{
+    background-color: rgb(19, 248, 11);
+    height: 3px;
+    width: 0;
+    position: absolute;
+    transition: width 1s ease-in-out;
+
+}
+.game-container {
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    margin-top: 42px;
+   
+
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template: repeat(3, 12vw) / repeat(3, 12vw);
+    font-family: 'Silkscreen', cursive;
+    position: relative;
+}
+
+.box {
+    border: 2px solid darkmagenta;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameInfoContainer {
+    margin-left: 60px;
+    /* margin-bottom: 30px; */
+    display: flex;
+    flex-direction: column;
+    font-family: 'DynaPuff', cursive;
+}
+
+.info {
+    font-size: 2vw;
+  }
+
+#resetButton {
+    margin: 20px 53px 0px 100px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    background-color: #f7d3f7;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.imageBox img {
+    margin-top: 50px;
+    width: 0;
+    transition: 1s ease-in-out;
+}
+
+
+/* utilities classes */
+.bt-0 {
+    border-top: 0;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.box:hover {
+    background-color: rgb(248, 230, 253);
+}
+
+@media screen and (max-width: 950px)
+{
+.game-container{
+    flex-wrap: wrap;
+    /* justify-content: center;
+    align-items: center; */
+    place-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template: repeat(3, 20vw) / repeat(3, 20vw);
+}
+
+.gameInfoContainer{
+    margin-top: 40px;
+}
+
+.info{
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+}
